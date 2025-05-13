@@ -1,0 +1,110 @@
+.cityAutocomplete {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.searchInputWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.searchInput {
+    width: 100%;
+    height: 35px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.searchInput:focus {
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.citiesDropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.dropdownItem {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dropdownItem:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.cityName {
+    font-weight: 500;
+    color: #333;
+}
+
+.cityRegion {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.loading {
+    text-align: center;
+    color: #666;
+    cursor: default;
+}
+
+.noResults {
+    text-align: center;
+    color: #666;
+    cursor: default;
+}
+
+/* Стили для скроллбара */
+.citiesDropdown::-webkit-scrollbar {
+    width: 8px;
+}
+
+.citiesDropdown::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.citiesDropdown::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.citiesDropdown::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .cityAutocomplete {
+        max-width: 100%;
+    }
+
+    .searchInput {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .dropdownItem {
+        padding: 12px 15px;
+    }
+} 
