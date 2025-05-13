@@ -1,0 +1,23 @@
+.themeSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Анимация для иконок */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.MuiSwitch-thumb {
+    transition: transform 0.3s ease-in-out;
+}
+
+.Mui-checked .MuiSwitch-thumb {
+    animation: rotate 0.5s ease-in-out;
+} 
